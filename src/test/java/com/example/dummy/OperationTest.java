@@ -5,20 +5,20 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 /**
  * @author Alexandru Somai
  */
 @RunWith(MockitoJUnitRunner.class)
-public class HelloWorldTest {
+public class OperationTest {
 
     @InjectMocks
-    private HelloWorld victim;
+    private Operation victim;
 
     @Test
-    public void testSayHello(){
-        assertThat(victim.sayHello(), is("hello"));
+    public void testSum() throws Exception {
+        assertThat(victim.sum(2, 2), is(4));
     }
 }
